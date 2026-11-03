@@ -1,4 +1,5 @@
-/.direnv/
-/.jj/
-/.pre-commit-config.yaml
-/result*
+.direnv/
+.jj/
+.pre-commit-config.yaml
+core
+result*
