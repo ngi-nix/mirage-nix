@@ -1,6 +1,6 @@
 {
   lib,
-  fetchFromForgejo,
+  fetchFromGitHub,
   gmp,
   stdenv,
   unstableGitUpdater,
@@ -11,9 +11,11 @@
   pname = "dnsvizor";
   version = "0-unstable-2026-08-07";
   materializedDir = ./materialized;
-  src = fetchFromForgejo {
-    domain = "git.robur.coop";
-    owner = "robur";
+  # ToDo(maintenance): reuse fetchFromForgejo on git.robur.coop
+  # whenever it provides archives again.
+  src = fetchFromGitHub {
+    #domain = "git.robur.coop";
+    owner = "robur-coop";
     repo = "dnsvizor";
     rev = "b41da80dbe6116cfffb2cdc088229180e677627b";
     hash = "sha256-veJ9LQ2QfkwGe29Pu4wFy7p9vzurW7o0GWiK1j7SrTg=";
